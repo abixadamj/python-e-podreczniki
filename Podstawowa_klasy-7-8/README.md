@@ -1,6 +1,6 @@
 # Wskazówki instalacji Python dla systemu MS-Windows:
 
-
+![python](https://user-images.githubusercontent.com/11718525/135937807-fd3e0fd2-a31a-47a4-90c6-b0bb1d0704d4.png)
 
 1. Link do pobierania instalatora: https://www.python.org/ftp/python/3.10.6/python-3.10.6-amd64.exe
 
