@@ -1,5 +1,7 @@
 # python-e-podreczniki
 
+![python_logo](https://www.python.org/static/community_logos/python-powered-w-200x80.png)
+
 Kody źródłowe używane w E-Podręcznikach [Zintegrowana Platforma Edukacyjna](https://zpe.gov.pl)
 
 
