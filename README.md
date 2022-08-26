@@ -18,6 +18,6 @@ W materiałach dla Liceum i technikum wykorzysywany jest Python 3.6, a w materia
 ```
 # przykład użycia walrus operator (Python 3.8)
 
-while licznik := int(input("Podaj licznik: ")) <= 0:
+while (licznik := int(input("Podaj licznik: "))) <= 0:
     print("Błąd: licznik powinien być większy od 0.")
 ```
