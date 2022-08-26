@@ -5,7 +5,7 @@ print(f"Początkowo lista jest pusta: {lista_przedmiotow}.")
 # uruchamiamy pętlę iteracyjną
 # wykona się 6 razy
 for _ in range(6):
-    # element wvczytamy z klawiatury
+    # element wczytany z klawiatury
     przedmiot = input("Podaj nazwę przedmiotu: ")
     # wewnątrz dodamy do listy kolejny element
     # używamy wbudowanego w Pythnie sposobu - metody LISTA.append()
