@@ -24,19 +24,55 @@ if wprowadzona_liczba == 0:
     print("Wprowadzona liczba to zero.")
 
 
-## silnik samochodu
 
+## Sprawdzenie w IDLE kodu
+
+# funkcja wykorzystywana w oprogramowaniu bankomatu
+
+def ilosc_banknotow_50_pln(kwota):
+    # tu wklej kod funkcji z możliwej odpowiedzi
+    # i wtedy sprawdź działanie programu
+    # tylko jeden z bloków kodu zadziała poprawnie
+    dostepnych_banknotow = 15
+    if kwota % 50 == 0:
+        if kwota // 50 <= dostepnych_banknotow:
+            return 1
+        else:
+            return 0
+    else:
+        return 0
+
+
+kwota_wyplaty = int(input("Podaj kwotę do wypłaty: "))
+if ilosc_banknotow_50_pln(kwota_wyplaty):
+    print("Wypłacam kwotę....")
+else:
+    print("Niestety, nie mam odpowiedniej liczby banknotów 50-złotowych")
+
+## silnik samochodu, w serwisie ZPE.gov.pl funkcje działają, tu zapiszę
+## ich definicje, aby kod był możliwy do uruchomienia w IDLE
+
+from random import choice
+
+def paliwo_jest_w_baku():
+    return choice((True, False))
+
+def zapiete_pasy_bezpieczenstwa():
+    return choice((True, False))
+
+def kluczyk_w_stacyjce():
+    return choice((True, False))
 
 print("Rozpoczynamy sekwencję uruchamiania silnika.")
 
 if paliwo_jest_w_baku():
     print("OK, jest paliwo.... sprawdzimy teraz pasy bezpieczeństwa.")
     if zapiete_pasy_bezpieczenstwa():
-        print("Super! Wiesz, jak jeździć bezpiecznie, zatem...")
+        print("Super! Wiesz, jak jeździć bezpiecznie, zatem kluczyki w dłoń.")
         if kluczyk_w_stacyjce():
-            print("Kluczyk w stacyjce, możesz ruszać... szerokiej drogi")
+            print("Kluczyk w stacyjce, możesz ruszać...szerokiej drogi.")
         else:
-            print("Lecz nie zapomnij włożyć kluczyka do stacyjki...")
+            print("Lecz nie zapomnij włożyć kluczyka do stacyjki.")
     else:
         print("Pasy są bardzo ważne - dopóki ich nie zapniesz, nie wolno ruszać samochodem!")
 else:
@@ -47,12 +83,13 @@ else:
 ## ich definicje, aby kod był możliwy do uruchomienia w IDLE
 ## dostępne dane: login: "linux", hasło: "python"
 
+from random import choice
 
 def internet_dostepny():
-    return True
+    return choice((True, False))
 
 def kontakt_z_serwerem():
-    return True
+    return choice((True, False))
 
 def prawidlowy_login(login):
     return True if login == "linux" else False
@@ -75,11 +112,13 @@ if internet_dostepny():
             # w testerce ZPE musi być przypisanie wartości, bo input() nie działa
             # haslo = "python"
             if prawidlowe_haslo(login, haslo):
-                print("Witaj -", login,"- w naszej sieci społecznościowej.")
+                print("Witaj -", login, "- w naszej sieci społecznościowej.")
                 print("Polecam się - https://Matrix.org")
             else:
                 print("Niestety, hasło jest błędne.")
         else:
             print("Niestety, nie znam takiego użytkownika")
+    else:
+        print("Serwer niedostępny - spróbuj za chwilę.")
 else:
     print("Brak Internetu - sprawdź połączenie.")
